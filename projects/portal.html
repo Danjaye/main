@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = 'utf-8'>
+    <meta name = 'viewport' content = 'width=device-width'>
+    <title>the site of dan</title>
+    <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
+    <link href = '/main.png' rel = 'icon' type = 'image/png'>
+  </head>
+  <body>
+    <script src = '/script.js'></script>
+    <div class = 'top noselect'>
+      <p><a href = '/'>landing</a></p>
+      <p><a href = '/projects'>projects</a></p>
+      <p><a href = '/posts/info.html'>info</a></p>
+      <p><a href = '/status.html'>statuses</a></p>
+    </div>
+    <center>
+      <div class = 'card noselect'>
+        <p class = 'title margin'>Portal</p>
+        <p class = 'margin'>Below you can test different elements and code for this site. Developer-only.</p>
+        <textarea placeholder = 'Enter your code...' id = 'code' onFocus = 'checkAbility()' onKeyDown = 'checkAbility()'></textarea>
+        <button onClick = 'testCode(); checkAbility()' id = 'testButton'>Test</button>
+        <button onClick = 'clearContainer(); checkAbility()' id = 'resetButton'>Reset</button>
+      </div>
+      <div class = 'card margin noselect border-radius background' id = 'container'>
+        <p>Sample text</p>
+      </div>
+    </center>
+  </body>
+</html>

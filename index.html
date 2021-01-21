@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = 'utf-8'>
+    <meta name = 'viewport' content = 'width=device-width'>
+    <title>the site of dan</title>
+    <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
+    <link href = '/main.png' rel = 'icon' type = 'image/png'>
+  </head>
+  <body>
+    <script src = "/script.js"></script>
+    <script>
+      document.cookie('hiddenNotice=false');
+
+      var x = document.cookie;
+      if(x == 'hiddenNotice=true'){
+        document.getElementById('faq').style.visibility = 'hidden';
+      }
+    </script>
+    <div class = 'noselect factbox' id = 'faq'>
+      <p>Quick heads up: I don't track you.</p>
+      <p class = 'small top-margin'>Nor do I log your IP or other personal identifiers. The web should be a place for anonymity.</p>
+      <p class = 'small top-margin'>I don't even use cookies, which is why this thing keeps popping up after you close it.</p>
+      <p class = 'top-margin small'><a href = '/posts/info.html#data'>Learn more</a></p>
+      <p class = 'small'><a style = 'top: 8px; right: 10px; position: absolute; color: black; text-decoration: none;' onClick = 'hideThing()'>X</a></p>
+    </div>
+    <a style = 'text-decoration: none; color: white' href = 'https://www.danjaye.lol/posts/seal.html'><div style = 'position: fixed; bottom: 20px; left: 20px; padding: 10px; border-radius: 10px; background: black; color: white; user-select: none; font-family: Alata; font-size: 13px;' title = 'This site was designed by Danjaye'>Created by Danjaye</div></a>
+    <div class = 'top noselect'>
+      <p><a href = '/'>landing</a></p>
+      <p><a href = '/projects'>projects</a></p>
+      <p><a href = '/posts/info.html'>info</a></p>
+      <p><a href = '/status.html'>statuses</a></p>
+    </div>
+    <center>
+      <div class = 'card noselect' style = 'margin-bottom: 0; margin-top: 10px;'>
+        <img class = 'rounded background' src = '/main.gif' draggable = 'false' title = 'Me'>
+        <p class = 'title margin'>Hey there.</p>
+        <p class = 'margin'>You've successfully scavenged the Internet for Danjaye's page. Nice to meet you.</p>
+        <form action = 'https://patreon.com/danjaye' method = 'post' target = '_blank' class = 'inline-block'>
+          <button title = 'Donate today'>Donate</button>
+        </form>
+        <form action = '/posts/info.html#contact' method = 'post' class = 'inline-block'>
+          <button title = 'Contact me'>Contact</button>
+        </form>
+      </div>
+      <div class = 'body noselect' style = 'margin-bottom: 60px;'>
+        <a class = 'div-capsule' href = 'https://www.youtube.com/channel/UC_o9Lgxvr4UOBsfuGI-9n-Q' target = '_blank' title = 'My youtube channel'><img src = '/images/youtube.png' class = 'social-button' draggable = 'false'></a>
+        <a class = 'div-capsule' href = 'https://www.twitter.com/danjayehere' target = '_blank' title = 'My twitter account'><img src = '/images/twitter.png' class = 'social-button' draggable = 'false'></a>
+        <a class = 'div-capsule' href = 'https://userblogs.danhost.us/users/danjaye' target = '_blank' title = 'My UserBlogs profile'><img src = '/images/userblogs.png' class = 'social-button' draggable = 'false'></a>
+      </div>
+    </center>
+  </body>
+</html>
