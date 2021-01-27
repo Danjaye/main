@@ -6,6 +6,15 @@
     <title>the site of dan</title>
     <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
     <link href = '/main.png' rel = 'icon' type = 'image/png'>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BWH6RLSVN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9BWH6RLSVN');
+    </script>
   </head>
   <body>
     <script src = '/script.js'></script>
@@ -19,7 +28,7 @@
       <div class = 'card noselect'>
         <p class = 'title margin'>Portal</p>
         <p class = 'margin'>Below you can test different elements and code for this site. Developer-only.</p>
-        <textarea placeholder = 'Enter your code...' id = 'code' onFocus = 'checkAbility()' onKeyDown = 'checkAbility()'></textarea>
+        <textarea placeholder = 'Enter your code...' id = 'code' onFocus = 'checkAbility()' onKeyDown = 'checkAbility()'><p>Sample text</p></textarea>
         <button onClick = 'testCode(); checkAbility()' id = 'testButton'>Test</button>
         <button onClick = 'clearContainer(); checkAbility()' id = 'resetButton'>Reset</button>
       </div>

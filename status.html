@@ -6,6 +6,15 @@
     <title>the site of dan</title>
     <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
     <link href = '/main.png' rel = 'icon' type = 'image/png'>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BWH6RLSVN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9BWH6RLSVN');
+    </script>
   </head>
   <body>
     <script src="/script.js"></script>
@@ -22,19 +31,22 @@
       </div>
       <div class = 'card margin noselect border-radius background inline-block'>
         <p class = 'header margin'>Danjaye's Site</p>
-        <p class = 'small tag-filled inline-block'>Online</p>
-        <p class = 'margin'>No issues found</p>
+        <p class = 'small tag-filled inline-block status'>Online</p>
+        <img class = 'icon-small' src = '/images/online.png' draggable = 'false'>
+        <p class = 'margin'>No server issues found</p>
         <p class = 'margin'><a target = '_blank' href = 'https://danjaye.lol'>https://danjaye.lol</a></p>
       </div>
       <div class = 'card margin noselect border-radius background inline-block'>
         <p class = 'header margin'>danjaye.net</p>
-        <p class = 'small tag-filled inline-block'>Online</p>
-        <p class = 'margin'>No issues found</p>
+        <p class = 'small tag-filled inline-block status'>Online</p>
+        <img class = 'icon-small' src = '/images/online.png' draggable = 'false'>
+        <p class = 'margin'>No server issues found</p>
         <p class = 'margin'><a target = '_blank' href = 'https://danjaye.net'>https://danjaye.net</a></p>
       </div>
       <div class = 'card margin noselect border-radius background inline-block'>
         <p class = 'header margin'>Dan's Hosting</p>
-        <p class = 'small tag-dashed inline-block'>Under Maintenance</p>
+        <p class = 'small tag-dashed inline-block status'>Maintenance</p>
+        <img class = 'icon-small' src = '/images/maintenance.png' draggable = 'false'>
         <p class = 'margin'>Not all subdomains are online</p>
         <p class = 'margin'><a target = '_blank' href = 'https://danhost.us'>https://danhost.us</a></p>
       </div>

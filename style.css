@@ -11,6 +11,7 @@ body
   margin: 0;
   background: lightgray;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 ::selection
@@ -62,6 +63,11 @@ body
   color: white;
   border-radius: 10px;
   padding: 7px;
+}
+
+.status
+{
+  min-width: 100px;
 }
 
 div.border
@@ -197,11 +203,11 @@ button
 {
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid transparent;
+  border: 1px solid lightgray;
   outline: none;
   color: black;
-  font-family: 'Roboto Mono', monospace;
-  min-width: 100px;
+  font-family: 'Inter', sans-serif;
+  min-width: 110px;
   background: white;
   transition-duration: 0.1s;
 }
@@ -215,15 +221,10 @@ div.background button
 button:hover
 {
   cursor: pointer;
+  border: 1px solid black;
 }
 
-div.background button:active
-{
-  background: black;
-  color: white;
-}
-
-button:active
+button:active, div.background button:active
 {
   background: black;
   color: white;
@@ -354,13 +355,19 @@ img.social-button
   padding: 5px;
   display: inline-block;
   margin: 5px;
-  border: 1px solid white;
+  border: 1px solid lightgray;
   transition-duration: 0.1s;
+}
+
+img.social-button:hover
+{
+  border: 1px solid black;
 }
 
 img.social-button:active, img.social-button:focus
 {
   filter: invert(1);
+  border: 1px solid white;
 }
 
 a.div-capsule
@@ -378,4 +385,26 @@ div.factbox
   position: fixed;
   padding: 20px;
   width: 250px;
+}
+
+img.icon-small
+{
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+
+button:active img
+{
+  filter: invert(1);
+}
+
+span.arrow
+{
+  transition-duration: 0.1s;
+}
+
+a.arrow-frame:hover span.arrow
+{
+  margin-left: 5px;
 }
