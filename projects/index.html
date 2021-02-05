@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang = 'en'>
   <head>
     <meta charset = 'utf-8'>
     <meta name = 'viewport' content = 'width=device-width'>
-    <title>the site of dan</title>
+    <title>the site of dan: projects</title>
     <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
     <link href = '/main.png' rel = 'icon' type = 'image/png'>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -15,6 +15,7 @@
 
       gtag('config', 'G-9BWH6RLSVN');
     </script>
+    <meta name = 'description' content = "Here's the Projects page for Danjaye's website, which has all of his current projects.">
   </head>
   <body>
     <script src="/script.js"></script>
@@ -24,24 +25,28 @@
       <p><a href = '/posts/info.html'>info</a></p>
       <p><a href = '/status.html'>statuses</a></p>
     </div>
-    <center>
-      <div class = 'card noselect'>
-        <p class = 'title margin'>Projects</p>
-        <p class = 'margin'>This is a full list of the projects I'm planning/working on.</p>
-      </div>
-      <div class = 'card margin noselect border-radius background inline-block' id = 'thunderblock'>
-        <p class = 'header margin'>Thunderblock</p>
-        <p class = 'small tag-dashed inline-block status'>Work In Progress</p>
-        <p class = 'margin'>A project revolving around the world of Minecraft.</p>
-        <button title = 'Submit your opinion' disabled>Push</button>
-      </div>
-      <div class = 'card margin noselect border-radius background inline-block' id = 'newlands'>
-        <p class = 'header margin'>Newlands</p>
-        <p class = 'small tag inline-block status'>Archived</p>
-        <p class = 'margin'>A new take on virtual reality, and the extents we can reach with it.</p>
-        <button title = 'Submit your opinion' disabled>Push</button>
-      </div>
-      <p class = 'small margin'>Note: Pushing a project will notify me that you think it should be at higher priority, kinda like a ping.</p>
-    </center>
+    <main>
+      <center>
+        <div class = 'card noselect'>
+          <p class = 'title margin'>Projects</p>
+          <p class = 'margin'>This is a full list of the projects I'm planning/working on.</p>
+        </div>
+        <div class = 'card margin noselect border-radius background inline-block' id = 'thunderblock'>
+          <p class = 'header margin'>Thunderblock</p>
+          <p class = 'small tag-dashed inline-block status'>Work In Progress</p>
+          <img class = 'icon-small' src = '/images/utility/maintenance.png'>
+          <p class = 'margin'>A project revolving around the world of Minecraft.</p>
+          <button title = 'Submit your opinion' disabled>Push</button>
+        </div>
+        <div class = 'card margin noselect border-radius background inline-block' id = 'newlands'>
+          <p class = 'header margin'>Newlands</p>
+          <p class = 'small tag inline-block status'>Archived</p>
+          <img class = 'icon-small disabled' src = '/images/utility/offline.png'>
+          <p class = 'margin'>A new take on virtual reality, and the extents we can reach with it.</p>
+          <button title = 'Submit your opinion' disabled>Push</button>
+        </div>
+        <p class = 'small margin'>Note: Pushing a project will notify me that you think it should be at higher priority, kinda like a ping.</p>
+      </center>
+    </main>
   </body>
 </html>

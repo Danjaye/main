@@ -40,29 +40,29 @@ body
   display: inline-block;
 }
 
+.tag, .tag-dashed, .tag-filled
+{
+  border-radius: 10px;
+  padding: 7px;
+  text-align: center;
+  border: 2px solid;
+}
+
 .tag
 {
   color: gray;
-  border: 1px solid;
-  border-radius: 10px;
-  padding: 7px;
 }
 
 .tag-dashed
 {
   color: black;
-  border: 1px solid;
-  border-radius: 10px;
-  padding: 7px;
 }
 
 .tag-filled
 {
-  border: 1px solid black;
+  border: 2px solid black;
   background: black;
   color: white;
-  border-radius: 10px;
-  padding: 7px;
 }
 
 .status
@@ -203,7 +203,7 @@ button
 {
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid lightgray;
+  border: 1px solid transparent;
   outline: none;
   color: black;
   font-family: 'Inter', sans-serif;
@@ -272,13 +272,18 @@ textarea
 {
   padding: 10px;
   background: white;
-  border: 1px solid;
+  border: 1px solid transparent;
   border-radius: 10px;
   outline: none;
   font-family: 'Roboto Mono', monospace;
   min-width: 200px;
   min-height: 100px;
   resize: none;
+}
+
+textarea:focus
+{
+  border: 1px solid black;
 }
 
 textarea::-webkit-scrollbar
@@ -407,4 +412,81 @@ span.arrow
 a.arrow-frame:hover span.arrow
 {
   margin-left: 5px;
+}
+
+a.link img
+{
+  opacity: .6;
+}
+
+a.link:hover img
+{
+  opacity: .5;
+}
+
+a.link:active img
+{
+  opacity: .7;
+}
+
+button:disabled img
+{
+  opacity: .6;
+}
+
+div.news-card
+{
+  width: 600px;
+  padding: 30px;
+  text-align: left;
+  border-radius: 15px;
+  background: white;
+}
+
+img.like-button
+{
+  padding: 2px;
+}
+
+img.like-button:hover
+{
+  cursor: pointer;
+}
+
+img.disabled
+{
+  opacity: .6;
+}
+
+img.disabled:hover
+{
+  cursor: not-allowed;
+}
+
+div.like-container-disabled p
+{
+  color: gray;
+}
+
+div.like-container-disabled
+{
+  display: inline-block;
+}
+
+div.like-container-disabled:hover
+{
+  cursor: not-allowed;
+}
+
+button:disabled img
+{
+  opacity: .4;
+  filter: none;
+}
+
+video
+{
+  outline: none;
+  width: auto;
+  height: 250px;
 }

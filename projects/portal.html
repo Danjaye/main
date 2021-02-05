@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang = 'en'>
   <head>
     <meta charset = 'utf-8'>
     <meta name = 'viewport' content = 'width=device-width'>
-    <title>the site of dan</title>
+    <title>the site of dan: developer portal</title>
     <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
     <link href = '/main.png' rel = 'icon' type = 'image/png'>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -15,6 +15,7 @@
 
       gtag('config', 'G-9BWH6RLSVN');
     </script>
+    <meta name = 'description' content = "The portal. Well, a portal for developers, basically like a little testing room in a lab. For this site in particular.">
   </head>
   <body>
     <script src = '/script.js'></script>
@@ -24,17 +25,19 @@
       <p><a href = '/posts/info.html'>info</a></p>
       <p><a href = '/status.html'>statuses</a></p>
     </div>
-    <center>
-      <div class = 'card noselect'>
-        <p class = 'title margin'>Portal</p>
-        <p class = 'margin'>Below you can test different elements and code for this site. Developer-only.</p>
-        <textarea placeholder = 'Enter your code...' id = 'code' onFocus = 'checkAbility()' onKeyDown = 'checkAbility()'><p>Sample text</p></textarea>
-        <button onClick = 'testCode(); checkAbility()' id = 'testButton'>Test</button>
-        <button onClick = 'clearContainer(); checkAbility()' id = 'resetButton'>Reset</button>
-      </div>
-      <div class = 'card margin noselect border-radius background' id = 'container'>
-        <p>Sample text</p>
-      </div>
-    </center>
+    <main>
+      <center>
+        <div class = 'card noselect'>
+          <p class = 'title margin'>Portal</p>
+          <p class = 'margin'>Below you can test different elements and code for this site. Developer-only.</p>
+          <textarea placeholder = 'Enter your code...' id = 'code' onFocus = 'checkAbility()' onKeyDown = 'checkAbility()'><p>Sample text</p></textarea>
+          <button onClick = 'testCode(); checkAbility()' id = 'testButton'>Test</button>
+          <button onClick = 'clearContainer(); checkAbility()' id = 'resetButton'>Reset</button>
+        </div>
+        <div class = 'card margin noselect border-radius background' id = 'container'>
+          <p>Sample text</p>
+        </div>
+      </center>
+    </main>
   </body>
 </html>

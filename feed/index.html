@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset = 'utf-8'>
+    <meta name = 'viewport' content = 'width=device-width'>
+    <title>the site of dan: feed</title>
+    <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
+    <link href = '/main.png' rel = 'icon' type = 'image/png'>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BWH6RLSVN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9BWH6RLSVN');
+    </script>
+    <meta name = 'description' content = "A feed where there's tons of... cool stuff to see. Stuff that goes on with Danjaye.">
+  </head>
+  <body>
+    <script src = '/script.js'></script>
+    <div class = 'top noselect'>
+      <p><a href = '/'>landing</a></p>
+      <p><a href = '/projects'>projects</a></p>
+      <p><a href = '/posts/info.html'>info</a></p>
+      <p><a href = '/status.html'>statuses</a></p>
+    </div>
+    <main>
+      <center>
+        <div class = 'card noselect'>
+          <p class = 'title margin'>Feed</p>
+          <p class = 'margin'>Latest news, here for all to see. Did you bring the popcorn?</p>
+        </div>
+        <div style = 'text-align: right; width: 600px;'>
+          <p style = 'display: inline' class = 'small'>Sort by: </p>
+          <select style = 'display: inline; background: white; padding: 1px; font-family: Alata; outline: none; font-size: 13px'>
+            <option>Relevance</option>
+            <option>Time Posted</option>
+            <option style = 'color: red'>Put a pin in it</option>
+          </select>
+        </div>
+        <div class = 'news-card margin noselect'>
+          <p class = 'tag-filled inline-block status small'>blogs</p>
+          <p class = 'title top-margin'>considering stuff <img class = 'icon-small' src = '/images/utility/pin.png' draggable = 'false' title = 'Put a PIN in it' onClick = 'easterEgg()'></p>
+          <p class = 'small'>Written by Danny the Manny &middot; 1/27/2021</p>
+          <p class = 'top-margin'>Helloooo, it's your finest of friends, danny the manny. I wanted to go over some fine topics today so that we could get more acquainted.</p>
+          <div class = 'like-container-disabled' style = 'margin-top: 20px;' title = 'Like features disabled'>
+            <img class = 'icon-small like-button disabled' src = '/images/utility/like.png' draggable = 'false'>
+            <p class = 'small' style = 'display: inline'>5 likes</p>
+          </div>
+        </div>
+        <div class = 'noselect' style = 'text-align: left; width: 600px;'>
+          <p class = 'small' id = 'egg'><a class = 'arrow-frame' target = '_blank' onClick = 'expandInfo()'>Learn more <span class = 'arrow'>→</span></a></p>
+        </div>
+        <div class = 'news-card margin noselect' id = 'expansion' style = 'visibility: hidden'>
+          <p class = 'title'>more info</p>
+          <p class = 'small'>Written by Danny the Manny &middot; 1/27/2021</p>
+          <p class = 'top-margin'>So basically these posts will spread like wildfire across the town that I call this website.</p>
+          <div class = 'like-container-disabled' style = 'margin-top: 20px;' title = 'Like features disabled'>
+            <img class = 'icon-small like-button disabled' src = '/images/utility/like.png' draggable = 'false' class = 'rounded background'>
+            <p class = 'small' style = 'display: inline'>2 likes</p>
+          </div>
+        </div>
+      </center>
+    </main>
+  </body>
+</html>

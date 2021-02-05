@@ -64,3 +64,39 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+eggExpanded = false;
+
+function easterEgg(){
+  var egg = document.getElementById('egg');
+  if(eggExpanded == false){
+    eggExpanded = true;
+    egg.innerHTML = "<a class = 'arrow-frame' target = '_blank' href = 'https://youtu.be/CoswAR4ouck?t=10' onClick = 'easterEgg()'>Put a pin in it <span class = 'arrow'>→</span></a>";
+  }
+  else {
+    eggExpanded = false;
+    if(expandedItemPostInfo == false){
+      egg.innerHTML = "<a class = 'arrow-frame' target = '_blank' onClick = 'expandInfo()'>Learn more <span class = 'arrow'>→</span></a>";
+    }
+    else {
+      egg.innerHTML = "<a class = 'arrow-frame' target = '_blank' onClick = 'expandInfo()'>Learn less <span class = 'arrow'>→</span></a>";
+    }
+  }
+}
+
+var expandedItemPostInfo = false;
+
+function expandInfo(){
+  var egg = document.getElementById('egg');
+  var expandedText = document.getElementById('expansion');
+  if(expandedItemPostInfo == false){
+    expandedItemPostInfo = true;
+    egg.innerHTML = "<a class = 'arrow-frame' target = '_blank' onClick = 'expandInfo()'>Learn less <span class = 'arrow'>→</span></a>";
+    expandedText.style.visibility = 'visible';
+  }
+  else {
+    expandedItemPostInfo = false;
+    egg.innerHTML = "<a class = 'arrow-frame' target = '_blank' onClick = 'expandInfo()'>Learn more <span class = 'arrow'>→</span></a>";
+    document.getElementById('expansion').style.visibility = 'hidden';
+  }
+}
