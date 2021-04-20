@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset = 'utf-8'>
+    <meta name = 'viewport' content = 'width=device-width'>
+    <title>the site of dan: server</title>
+    <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
+    <link href = '/main.png' rel = 'icon' type = 'image/png'>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BWH6RLSVN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9BWH6RLSVN');
+    </script>
+    <meta name = 'description' content = "This is a page describing Danjaye's mc server.">
+  </head>
+  <body>
+    <script src="/script.js"></script>
+    <div class = 'top noselect'>
+      <p><a href = '/'>landing</a></p>
+      <p><a href = '/projects'>projects</a></p>
+      <p><a href = '/posts/info.html'>info</a></p>
+      <p><a href = '/status.html'>statuses</a></p>
+    </div>
+    <main>
+      <center>
+        <div class = 'card noselect'>
+          <p class = 'title margin'>Server&nbsp;<code style = 'vertical-align: middle;' class = 'noselect' id = 'time'>00:00:00:00</code></p>
+          <p class = 'margin'>I had a server set up for those of my friends who would like to join and mess around.</p>
+          <code>172.96.172.155:25555</code>
+          <button style = 'padding: 5px; font-size: 13px;' onClick = 'copy("172.96.172.155:25555");'>Copy</button>
+          <p class = 'small' style = 'margin-top: 10px;'>Update: for the last month that the server will stay open, anyone can join. IP is above.</p>
+        </div>
+        <div class = 'card margin noselect border-radius background inline-block' id = 'thunderblock' style = 'text-align: left;'>
+          <p class = 'header'>Information</p>
+          <ul>
+            <li><p class = 'small'>i9-10900K Intel processor</p></li>
+            <li><p class = 'small'>Located in Miami, Florida</p></li>
+            <li><p class = 'small'>3 GB of RAM</p></li>
+            <li><p class = 'small'>$15.95/month (<a href = 'https://www.paypal.com/donate?hosted_button_id=2AQLJKZBXRWBQ' rel = 'noreferrer' class = 'link' target = '_blank'>donate <img src = '/images/utility/extend.png' class = 'icon-small'></a>)</p></li>
+          </ul>
+        </div>
+          <!-- <form class = 'inline-block' action = 'javascript:window.location.assign("http://mc.danjaye.lol:25361");'>
+            <button title = 'See the online map' disabled>View map</button>
+          </form>
+        </div>
+        <div style = 'position: fixed; bottom: 0px; width: 100%; padding: 15px; text-align: left;' class = 'noselect background'>
+          <p class = 'small'>©2020 Danjaye, Inc. All rights reserved &middot; Contact: <a href = 'mailto:admin@danjaye.lol'>admin@danjaye.lol</a></p>
+        </div>-->
+      </center>
+    </main>
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("May 3, 2021 12:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("time").innerHTML = days + ":" + hours + ":" + minutes + ":" + seconds;
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("time").innerHTML = "00:00:00:00";
+      }
+    }, 1000);
+    </script>
+  </body>
+</html>

@@ -28,11 +28,61 @@
     <main>
       <center>
         <div class = 'card noselect'>
-          <p class = 'title margin'>Coming soon</p>
-          <p class = 'margin'>In the meantime, feel free to roam the rest of the site.</p>
+          <p class = 'title margin'>Memes</p>
+          <p class = 'margin'>This page is still being worked on. Feel free to view memes.</p>
         </div>
-        <video src = '/memes/raw/v_034.mp4' controls><p>Your browser doesn't support videos.</p></video>
+        <video onstalled = 'randomMeme();' src = '/memes/raw/v_045.mp4' type = 'video/mp4' id = 'meme-display' controls autoplay muted>
+          <p class = 'small'>Your browser doesn't support videos.</p>
+        </video>
+        <div class = 'card noselect'>
+          <button onClick = 'beforeMeme();' id = 'before'>Previous</button>
+          <p class = 'inline-block small' style = 'min-width: 50px;'><span id = 'count'></span>/38</p>
+          <button onClick = 'nextMeme();' id = 'next'>Next</button>
+          <!-- <button onClick = 'randomMeme();'>Random</button> -->
+        </div>
       </center>
     </main>
+    <script>
+    var i = 1;
+    function randomMeme(){
+      i = Math.floor(Math.random(1, 100) * 30);
+      if(i < 10){
+        var id = '0' + i.toString();
+      }
+      else {
+        var id = i.toString();
+      }
+      document.getElementById('meme-display').src = '/memes/raw/v_0' + id + '.mp4';
+    }
+    function nextMeme(){
+      if(i < 38){
+        i = i + 1;
+        if(i < 10){
+          var id = '0' + i;
+        }
+        else {
+          var id = i.toString();
+        }
+        document.getElementById('meme-display').src = '/memes/raw/v_0' + id + '.mp4';
+      }
+    }
+    function beforeMeme(){
+      if(i > 1){
+        i = i - 1;
+        if(i < 10){
+          var id = '0' + i;
+        }
+        else {
+          var id = i.toString();
+        }
+        document.getElementById('meme-display').src = '/memes/raw/v_0' + id + '.mp4';
+      }
+    }
+    function update(){
+      document.getElementById('count').innerHTML = i;
+    }
+    randomMeme();
+    setInterval(update, 300);
+    </script>
   </body>
 </html>

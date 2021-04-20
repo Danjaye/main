@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset = 'utf-8'>
+    <meta name = 'viewport' content = 'width=device-width'>
+    <title>the site of dan: blog</title>
+    <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
+    <link href = '/main.png' rel = 'icon' type = 'image/png'>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BWH6RLSVN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9BWH6RLSVN');
+    </script>
+    <meta name = 'description' content = "A feed where there's tons of... cool stuff to see. Stuff that goes on with Danjaye.">
+  </head>
+  <body>
+    <script src = '/script.js'></script>
+    <div class = 'top noselect'>
+      <p><a href = '/'>landing</a></p>
+      <p><a href = '/projects'>projects</a></p>
+      <p><a href = '/posts/info.html'>info</a></p>
+      <p><a href = '/status.html'>statuses</a></p>
+    </div>
+    <main>
+      <center>
+        <div class = 'card noselect'>
+          <p class = 'title margin'>Blog</p>
+          <p class = 'margin'>Latest news, here for all to see. Did you bring the popcorn?</p>
+        </div>
+        <div style = 'text-align: right; width: 600px;'>
+          <p style = 'display: inline' class = 'small'>Sort by: </p>
+          <select>
+            <option>Relevance</option>
+            <option>Time Posted</option>
+          </select>
+        </div>
+        <div class = 'news-card margin noselect glow'>
+          <p class = 'tag-filled inline-block status small'>Informational</p>
+          <p class = 'small inline-block' style = 'margin-left: 10px;'>PINNED</p>
+          <p class = 'title top-margin'>latest updates <img class = 'icon-small' src = '/images/utility/pin.png' draggable = 'false' title = 'Pinned' onClick = 'easterEgg()'></p>
+          <p class = 'small'>Posted 1/27/2021</p>
+          <p class = 'top-margin'>Ok, so here's some basic updates, mainly about things like projects and things, future stuff. So that nobody is unaware.</p>
+          <p class = 'header top-margin'>I'm not sure about projects.</p>
+          <p class = 'top-margin'>This basically just means that I'm not sure when I'll start doing them, or if I'll do them at all. Here's some pointers:</p>
+          <div style = 'margin-top: 12px;'>
+            <div>
+              <div class = 'inline-block' style = 'vertical-align: middle;'>
+                <p class = 'tag inline-block small' style = 'margin-right: 10px; width: 70px;'>Cancelled</p>
+              </div>
+              <div class = 'inline-block'>
+                <p class = 'small'>This means that the project has been discontinued.</p>
+              </div>
+            </div>
+            <div style = 'margin-top: 5px;'>
+              <div class = 'inline-block' style = 'vertical-align: middle;'>
+                <p class = 'tag inline-block small' style = 'margin-right: 10px; width: 70px;'>Archived</p>
+              </div>
+              <div class = 'inline-block'>
+                <p class = 'small'>This means that the project isn't currently active, but may return.</p>
+              </div>
+            </div>
+            <div style = 'margin-top: 5px;'>
+              <div class = 'inline-block' style = 'vertical-align: middle;'>
+                <p class = 'tag-dashed inline-block small' style = 'margin-right: 10px; width: 70px;'>Work in Progress</p>
+              </div>
+              <div class = 'inline-block'>
+                <p class = 'small'>This means the project is being worked on.</p>
+              </div>
+            </div>
+            <div style = 'margin-top: 5px;'>
+              <div class = 'inline-block' style = 'vertical-align: middle;'>
+                <p class = 'tag-dashed inline-block small' style = 'margin-right: 10px; width: 70px;'>Early Release</p>
+              </div>
+              <div class = 'inline-block'>
+                <p class = 'small'>This means the project has been released early, and is under development.</p>
+              </div>
+            </div>
+            <div style = 'margin-top: 5px;'>
+              <div class = 'inline-block' style = 'vertical-align: middle;'>
+                <p class = 'tag-filled inline-block small' style = 'margin-right: 10px; width: 70px;'>Released</p>
+              </div>
+              <div class = 'inline-block'>
+                <p class = 'small'>This means that the project has been deployed, but is still active.</p>
+              </div>
+            </div>
+            <div style = 'margin-top: 5px;'>
+              <div class = 'inline-block' style = 'vertical-align: middle;'>
+                <p class = 'tag-filled inline-block small' style = 'margin-right: 10px; width: 70px;'>Completed</p>
+              </div>
+              <div class = 'inline-block'>
+                <p class = 'small'>This means that the project is done, and I wash my hands of it.*</p>
+              </div>
+            </div>
+          </div>
+          <p class = 'top-margin'>I'm currently only using the status page for my bigger services, like my <a href = 'https://danhost.us' target = '_blank' class = 'link'>hosting thing <img class="icon-small" style="height: 10px; width: 10px;" src="/images/utility/extend.png" draggable="false"></a>.</p>
+          <p class = 'header top-margin'>The future of UserBlogs and things</p>
+          <p class = 'top-margin'>Those projects will stay up as long as they can possibly survive. I won't cancel any of them, and they'll remain free and open-source to anyone.</p>
+          <p class = 'top-margin small'>* This means I withdraw, but the project could continue.</p>
+          <div class = 'like-container-disabled' style = 'margin-top: 20px;' title = 'Like features disabled'>
+            <img class = 'icon-small like-button disabled' src = '/images/utility/like.png' draggable = 'false'>
+            <p class = 'small' style = 'display: inline'>5 likes</p>
+          </div>
+        </div>
+        <!--
+        <div class = 'news-card margin noselect'>
+          <p class = 'tag-filled inline-block status small'>blogs</p>
+          <p class = 'title top-margin'>considering stuff</p>
+          <p class = 'small'>Written by Danny the Manny &middot; 1/27/2021</p>
+          <p class = 'top-margin'>Helloooo, it's your finest of friends, danny the manny. I wanted to go over some fine topics today so that we could get more acquainted.</p>
+          <div class = 'like-container-disabled' style = 'margin-top: 20px;' title = 'Like features disabled'>
+            <img class = 'icon-small like-button disabled' src = '/images/utility/like.png' draggable = 'false'>
+            <p class = 'small' style = 'display: inline'>5 likes</p>
+          </div>
+        </div>
+        <div class = 'noselect' style = 'text-align: left; width: 600px;'>
+          <p class = 'small' id = 'egg'><a class = 'arrow-frame' target = '_blank' onClick = 'expandInfo()'>Learn more <span class = 'arrow'>→</span></a></p>
+        </div>
+        <div class = 'news-card margin noselect' id = 'expansion' style = 'visibility: hidden'>
+          <p class = 'title'>more info</p>
+          <p class = 'small'>Written by Danny the Manny &middot; 1/27/2021</p>
+          <p class = 'top-margin'>So basically these posts will spread like wildfire across the town that I call this website.</p>
+          <div class = 'like-container-disabled' style = 'margin-top: 20px;' title = 'Like features disabled'>
+            <img class = 'icon-small like-button disabled' src = '/images/utility/like.png' draggable = 'false' class = 'rounded background'>
+            <p class = 'small' style = 'display: inline'>2 likes</p>
+          </div>
+        </div>
+        -->
+      </center>
+    </main>
+  </body>
+</html>

@@ -100,3 +100,11 @@ function expandInfo(){
     document.getElementById('expansion').style.visibility = 'hidden';
   }
 }
+
+function visit(link){
+  window.open(link);
+}
+
+function copy(item){
+  navigator.clipboard.writeText(item);
+}

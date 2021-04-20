@@ -6,17 +6,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
+:root
+{
+  --main: black;
+  --main-lower: gray;
+  --main-med: lightgray;
+}
+
 body
 {
   margin: 0;
   background: lightgray;
+  background: var(--main-med);
   scroll-behavior: smooth;
   height: 100%;
 }
 
 ::selection
 {
-  background: black;
+  background: var(--main);
   color: white;
 }
 
@@ -50,18 +58,18 @@ body
 
 .tag
 {
-  color: gray;
+  color: var(--main-lower);
 }
 
 .tag-dashed
 {
-  color: black;
+  color: var(--main);
 }
 
 .tag-filled
 {
-  border: 2px solid black;
-  background: black;
+  border: 2px solid var(--main);
+  background: var(--main);
   color: white;
 }
 
@@ -72,7 +80,7 @@ body
 
 div.border
 {
-  border: 1px solid;
+  border: 2px solid black;
 }
 
 div.border-radius
@@ -88,6 +96,7 @@ div.border-radius
 div.top
 {
   background: black;
+  background: var(--main);
   color: white;
   padding: 20px;
   text-align: right;
@@ -112,7 +121,7 @@ div.top a
 div.top a:hover, div.top a:focus
 {
   background: white;
-  color: black;
+  color: var(--main);
 }
 
 div.body
@@ -125,6 +134,7 @@ p
   font-family: 'Alata', sans-serif;
   margin: 0;
   line-height: 1.35;
+  color: var(--main);
 }
 
 p.top-margin
@@ -146,7 +156,7 @@ a
 
 a:hover
 {
-  color: gray;
+  color: var(--main-lower);
   cursor: pointer;
 }
 
@@ -155,16 +165,22 @@ a:active
   color: rgb(65, 65, 65);
 }
 
-p.title
+p.title, h1
 {
   font-family: 'Anton', sans-serif;
-  font-size: 40px;
+  font-size: 43px;
 }
 
-p.header
+h1, h2, h3
+{
+  font-weight: 400;
+  font-family: 'Anton', sans-serif;
+}
+
+p.header, h2
 {
   font-family: 'Anton', sans-serif;
-  font-size: 27px;
+  font-size: 30px;
 }
 
 img
@@ -189,24 +205,47 @@ input
   background: white;
   border: none;
   outline: none;
-  padding: 10px;
-  font-family: 'Fira Sans', sans-serif;
+  padding: 7px;
+  font-family: 'Alata', sans-serif;
   margin: 0;
+}
+
+div.background input
+{
+  background: none;
+  border: 1px solid gray;
+}
+
+div.background input:focus
+{
+  border: 1px solid black;
 }
 
 code
 {
   font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  background: rgb(199, 199, 199);
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid transparent;
+  user-select: all;
+}
+
+code::selection
+{
+  background: none;
+  color: rgb(68, 68, 68);
 }
 
 button
 {
-  padding: 10px;
+  padding: 8px;
   border-radius: 10px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   outline: none;
-  color: black;
-  font-family: 'Inter', sans-serif;
+  color: var(--main);
+  font-family: 'Alata', sans-serif;
   min-width: 110px;
   background: white;
   transition-duration: 0.1s;
@@ -215,32 +254,31 @@ button
 div.background button
 {
   background: none;
-  border: 1px solid;
+  border: 2px solid;
 }
 
 button:hover
 {
   cursor: pointer;
-  border: 1px solid black;
+  border: 2px solid var(--main);
 }
 
 button:active, div.background button:active
 {
-  background: black;
+  background: var(--main);
   color: white;
-  border: 1px solid black;
+  border: 2px solid var(--main);
 }
 
 button:disabled
 {
-  color: gray;
-  border: 1px solid;
-  background: transparent;
+  color: var(--main-lower);
 }
 
 button:disabled:hover
 {
   cursor: not-allowed;
+  border: 2px solid white;
 }
 
 button.form
@@ -257,12 +295,12 @@ form
 hr
 {
   border: 0;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--main);
 }
 
 .list
 {
-  color: black;
+  color: var(--main);
   padding: 5px;
   background: white;
   margin: 5px;
@@ -272,18 +310,12 @@ textarea
 {
   padding: 10px;
   background: white;
-  border: 1px solid transparent;
-  border-radius: 10px;
+  border: 1px solid var(--main-lower);
   outline: none;
   font-family: 'Roboto Mono', monospace;
   min-width: 200px;
   min-height: 100px;
   resize: none;
-}
-
-textarea:focus
-{
-  border: 1px solid black;
 }
 
 textarea::-webkit-scrollbar
@@ -294,7 +326,7 @@ textarea::-webkit-scrollbar
 textarea::-webkit-scrollbar-thumb
 {
   border-radius: 10px;
-  background: lightgray;
+  background: var(--main-med);
   border: none;
 }
 
@@ -302,6 +334,8 @@ ul
 {
   margin: 0;
   margin-top: 10px;
+  padding: 0;
+  padding-left: 17px;
 }
 
 li
@@ -335,8 +369,9 @@ div.tooltip-bar
   width: 20px;
   height: 20px;
   text-align: center;
-  background: black;
+  background: var(--main);
   color: white;
+  border: 2px solid var(--main);
 }
 
 div.tooltip-bar:hover
@@ -344,10 +379,14 @@ div.tooltip-bar:hover
   cursor: pointer;
 }
 
+div.tooltip-bar p
+{
+  color: white;
+}
+
 img.display
 {
   width: 100%;
-  border-radius: 10px;
   object-fit: cover;
 }
 
@@ -360,19 +399,19 @@ img.social-button
   padding: 5px;
   display: inline-block;
   margin: 5px;
-  border: 1px solid lightgray;
+  border: 2px solid white;
   transition-duration: 0.1s;
 }
 
 img.social-button:hover
 {
-  border: 1px solid black;
+  border: 2px solid var(--main);
 }
 
 img.social-button:active, img.social-button:focus
 {
   filter: invert(1);
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
 a.div-capsule
@@ -441,6 +480,7 @@ div.news-card
   text-align: left;
   border-radius: 15px;
   background: white;
+  border: 2px solid white;
 }
 
 img.like-button
@@ -465,7 +505,7 @@ img.disabled:hover
 
 div.like-container-disabled p
 {
-  color: gray;
+  color: var(--main-lower);
 }
 
 div.like-container-disabled
@@ -489,4 +529,43 @@ video
   outline: none;
   width: auto;
   height: 250px;
+  border-radius: 10px;
+}
+
+select
+{
+  border: 1px solid var(--main-lower);
+  display: inline;
+  background: white;
+  padding: 1px;
+  font-family: Alata;
+  outline: none;
+  font-size: 13px;
+}
+
+select:disabled
+{
+  border: 1px solid var(--main-lower);
+}
+
+.glow
+{
+  box-shadow: 0px 0px 20px var(--main-lower);
+}
+
+#testButton, #resetButton
+{
+  border-radius: 0;
+  border: 1px solid var(--main-lower);
+}
+
+#testButton:active, #resetButton:active
+{
+  border: 1px solid var(--main);
+}
+
+a.link img
+{
+  height: 10px;
+  width: 10px;
 }

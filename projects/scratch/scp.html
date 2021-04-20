@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset = 'utf-8'>
+    <meta name = 'viewport' content = 'width=device-width'>
+    <title>the site of dan: scratch projects</title>
+    <link href = '/style.css' rel = 'stylesheet' type = 'text/css' />
+    <link href = '/main.png' rel = 'icon' type = 'image/png'>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BWH6RLSVN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9BWH6RLSVN');
+    </script>
+    <meta name = 'description' content = "A page deemed specifically for a Scratch game I made.">
+  </head>
+  <body>
+    <script src = "/script.js"></script>
+    <script>
+      document.cookie('hiddenNotice=false');
+
+      var x = document.cookie;
+      if(x == 'hiddenNotice=true'){
+        document.getElementById('faq').style.visibility = 'hidden';
+      }
+    </script>
+    <div class = 'top noselect'>
+      <p><a href = '/'>landing</a></p>
+      <p><a href = '/projects'>projects</a></p>
+      <p><a href = '/posts/info.html'>info</a></p>
+      <p><a href = '/status.html'>statuses</a></p>
+    </div>
+    <main>
+      <center>
+        <div class = 'card noselect inline-block' style = 'margin-bottom: 0; margin-top: 10px; vertical-align: middle; width: 500px;'>
+          <iframe src="https://scratch.mit.edu/projects/372144009/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" style = 'border-radius: 10px; background: gray;' allowfullscreen></iframe>
+        </div>
+        <div class = 'card noselect inline-block' style = 'margin-bottom: 0; margin-top: 10px; vertical-align: middle; text-align: left; overflow-y: auto; height: 402px;'>
+          <p class = 'small'>SCRATCH PROJECTS &middot; 3/30/21</p>
+          <p class = 'title top-margin'>SCP: Containment Breach</p>
+          <p class = 'top-margin'>This project was created in Scratch. You can visit the project by clicking here. However, I wanted to provide more insight into it.</p>
+          <p class = 'header top-margin'>Features</p>
+          <ul>
+            <li><p>Two SCPs to interact with, which are SCP-096 and SCP-173</p></li>
+            <li><p>Includes in-game settings and options to change</p></li>
+            <li><p>A sandbox mode where you can use the console and stuff to your heart's content</p></li>
+          </ul>
+        </div>
+      </center>
+    </main>
+  </body>
+</html>
